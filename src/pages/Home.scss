@@ -1,0 +1,48 @@
+@use '../styles/animations.scss';
+@use '../styles/variables.scss' as *;
+
+.hero-section {
+  background: url("../assets/HomeBackground.jpg");
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+main h1 {
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-size: 10vW;
+  line-height: 1;
+  color: $font-color;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  height: 100vh;
+  padding: $page-padding;
+  
+}
+
+.animate {
+animation: fadeIn 3s ease-in forwards;
+}
+
+main p:first-child {
+    font-weight: bold;
+    color: $subtitle-color;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.644);
+}
+
+main p:last-child {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    color: $font-color;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.644);
+}
