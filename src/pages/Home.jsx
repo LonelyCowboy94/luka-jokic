@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./Home.scss";
+import styles from './Home.module.scss';
 import VideoCategory from "../components/VideoCategory";
 
 const Home = ({ animate, setAnimate }) => {
@@ -35,8 +35,8 @@ M44.863,11.483H34.479l-2.51-6.271c-0.162-0.406-0.555-0.672-0.992-0.672H16.023c-0
 
   return (
     <>
-      <section className="hero-section">
-        <main className={animate ? "animate" : ""}>
+      <section className={styles.heroSection}>
+        <main className={`${animate ? "animate" : ""} ${styles.main}`}>
           <p>Video & Motion Designer</p>
           <h1>
             JOKIĆ <br /> LUKA
@@ -47,9 +47,9 @@ M44.863,11.483H34.479l-2.51-6.271c-0.162-0.406-0.555-0.672-0.992-0.672H16.023c-0
           </p>
         </main>
       </section>
-      <section className="explore-section">
+      <section className={styles.exploreSection}>
         <h2>Where storytelling meets artistry and cinematic craft</h2>
-        <div className="category-group">
+        <div className={styles.categoryGroup}>
           <div>
             <h3>Narative</h3>
             <VideoCategory path={narativePath} />

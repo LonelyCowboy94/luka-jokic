@@ -1,22 +1,22 @@
 @use "../styles/animations.scss";
 @use "../styles/variables.scss" as *;
 
-.hero-section {
+.heroSection {
   height: 90vh;
   width: 100%;
 }
 
-main h1 {
+.main h1 {
   text-align: center;
   font-family: "Anton", sans-serif;
   letter-spacing: 15px;
-  font-size: 160px;
+  font-size: 192px;
   line-height: 1;
   color: $font-color;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.356);
 }
 
-main {
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,23 +24,24 @@ main {
   height: 100vh;
   padding: $page-padding;
   user-select: none;
+ 
 }
 
 .animate {
   animation: fadeIn 3s ease-in forwards;
 }
 
-main p:first-child {
+.main p:first-child {
   font-weight: bold;
   color: $subtitle-color;
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.747);
   margin: 10px;
 }
 
-main p:last-child {
+.main p:last-child {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.3em;
   line-height: 0.7;
   letter-spacing: 0.8px;
   text-align: center;
@@ -49,34 +50,34 @@ main p:last-child {
   margin: 5px;
 }
 
-main p:last-child span {
+.main p:last-child span {
   font-family: "Dancing Script", cursive;
   font-size: 1.3em;
   text-shadow: 2px 2px 4px black;
   color: rgb(255, 104, 104);
 }
 
-.explore-section {
+.exploreSection {
   height: 100vh;
   width: 100%;
   padding: $page-padding;
   text-align: center;
 }
 
-.explore-section h2 {
+.exploreSection h2 {
   margin-top: 20px;
   color: $font-color;
   text-decoration: underline;
   font-size: 2rem;
 }
 
-.explore-section h3 {
+.exploreSection h3 {
   font-size: 1.6rem;
   color: $subtitle-color;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
 }
 
-.category-group {
+.categoryGroup {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,14 +87,14 @@ main p:last-child span {
   width: 100%;
 }
 
-.category-group div {
+.categoryGroup div {
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 200px;
 }
 
-.explore-section div p {
+.exploreSection div p {
   text-align: justify;
   text-justify: inter-word;
   line-height: 1.5;
