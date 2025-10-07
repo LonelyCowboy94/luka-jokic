@@ -19,7 +19,7 @@ const Home = ({ animate, setAnimate }) => {
         <h1>
           JOKIĆ <br /> LUKA
         </h1>
-        <p>Creating cinematic experiences <br /> one frame at a time</p>
+        <p>Creating cinematic experiences <br /> <span>one frame at a time</span></p>
       </main>
     </section>
   );

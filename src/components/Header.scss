@@ -6,14 +6,16 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 10vh;
+  height: 12vh;
   background-color: black;
   font-weight: 600;
+  font-style: italic;
   --start-position: -100%;
   --close-to-end-position: -30%;
   animation: $movie-animation;
   position: absolute;
   z-index: 1;
+  cursor: url('../assets/cursor.png') 16 16, auto;
 }
 
 header nav {
@@ -23,13 +25,14 @@ header nav {
 header nav ul {
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 50px;
 }
 
 header nav ul li a {
   font-size: 1.2rem;
   text-decoration: none;
   color: $font-color;
+  user-select: none;
 }
 
 header nav ul li a:hover, header nav ul li a.active {
