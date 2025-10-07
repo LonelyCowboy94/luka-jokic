@@ -1,24 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Routes from './Routes';
+import Routes from "./routes/Routes";
 
 function App() {
-
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     setAnimate(true);
-}, [])
+  }, []);
 
   return (
     <>
       <Header />
-      <Routes animate={animate} setAnimate={setAnimate}/>
+      <Routes animate={animate} setAnimate={setAnimate} />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
