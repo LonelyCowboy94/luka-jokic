@@ -15,6 +15,7 @@ footer {
     --start-position: 100%;
     --close-to-end-position: 30%;
     animation: $movie-animation;
+    z-index: 1;
 }
 
 footer div { 
