@@ -7,6 +7,11 @@ const Header = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleNavClick = () => {
+    setIsOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <header>
         <nav className="navbar">
@@ -16,19 +21,19 @@ const Header = () => {
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <NavLink to="/" end onClick={() => setIsOpen(false)}>Home</NavLink>
+              <NavLink to="/" end onClick={() => handleNavClick()}>Home</NavLink>
             </li>
             <li>
-              <NavLink to="/showreel" onClick={() => setIsOpen(false)}>Showreel</NavLink>
+              <NavLink to="/showreel" onClick={() => handleNavClick()}>Showreel</NavLink>
             </li>
             <li>
-              <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
+              <NavLink to="/about" onClick={() => handleNavClick()}>About</NavLink>
             </li>
             <li>
-              <NavLink to="/blog" onClick={() => setIsOpen(false)}>Blog</NavLink>
+              <NavLink to="/blog" onClick={() => handleNavClick()}>Blog</NavLink>
             </li>
             <li>
-              <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+              <NavLink to="/contact" onClick={() => handleNavClick()}>Contact</NavLink>
             </li>
           </ul>
         </div>
