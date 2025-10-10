@@ -15,7 +15,7 @@ const About = () => {
 
       <section className={styles.bio}>
         <div className={styles.imageWrapper}>
-          <img src={profileImage} alt="Luka Jokić" />
+          <img src={profileImage} alt="Portrait of Luka Jokić – Video Editor" />
         </div>
         <div className={styles.text}>
           <p className={styles.textIndent}>

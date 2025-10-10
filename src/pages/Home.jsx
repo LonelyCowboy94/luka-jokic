@@ -34,8 +34,8 @@ M44.863,11.483H34.479l-2.51-6.271c-0.162-0.406-0.555-0.672-0.992-0.672H16.023c-0
   }, [animate, setAnimate]);
 
   return (
-    <main className={styles.main} >
-      <section className={`${styles.heroSection} ${animate ? styles.animate : ""}`}>
+    <main className={`${styles.main} ${animate ? styles.animate : ""}`} >
+      <section className={styles.heroSection}>
         
           <p>Video & Motion Designer</p>
           <h1>
