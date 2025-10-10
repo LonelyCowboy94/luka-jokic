@@ -2,12 +2,17 @@
 @use "../styles/variables.scss" as *;
 
 .heroSection {
-  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -130px;
+  height: 100vh;
   width: 100%;
 }
 
-.main h1 {
-  text-align: center;
+.heroSection h1 {
   font-family: "Anton", sans-serif;
   letter-spacing: 15px;
   font-size: 192px;
@@ -17,21 +22,15 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   padding: $page-padding;
   user-select: none;
- 
 }
 
 .animate {
   animation: fadeIn 3s ease-in forwards;
 }
 
-.main p:first-child {
+.heroSection p:first-child {
   font-weight: bold;
   color: $subtitle-color;
   font-size: 1.4em;
@@ -39,7 +38,7 @@
   margin: 10px;
 }
 
-.main p:last-child {
+.heroSection p:last-child {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.3em;
   line-height: 0.7;
@@ -50,17 +49,17 @@
   margin: 5px;
 }
 
-.main p:last-child span {
+.heroSection p:last-child span {
   font-family: "Dancing Script", cursive;
   font-size: 1.3em;
   text-shadow: 2px 2px 4px black;
-  color: rgb(255, 104, 104);
+  color: $accent-color;
 }
 
 .exploreSection {
   height: 100vh;
   width: 100%;
-  padding: $page-padding;
+
   text-align: center;
 }
 
@@ -90,6 +89,7 @@
 .categoryGroup div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   max-width: 200px;
 }
@@ -103,4 +103,17 @@
   color: $font-color;
   font-size: 1.2rem;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.541);
+}
+
+@media screen and (max-width: 768px) {
+  .heroSection h1 {
+    font-size: 124px;
+  }
+  .categoryGroup div {
+    margin: 0 20px;
+  }
+  .categoryGroup p {
+    border-bottom: 1px dotted;
+    padding-bottom: 20px;
+  }
 }
