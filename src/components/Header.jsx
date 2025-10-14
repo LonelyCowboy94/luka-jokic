@@ -25,10 +25,10 @@ const Header = () => {
               <NavLink to="/" end onClick={() => handleNavClick()}>Home</NavLink>
             </li>
             <li>
-              <Link to="showreel" duration={1800} smooth="easeInOutQuart">Showreel</Link>
+              <Link to="showreel" duration={1800} smooth="easeInOutQuart" offset={-90} onClick={() => setIsOpen(false)}>Showreel</Link>
             </li>
             <li>
-              <Link to="about" duration={1800} smooth="easeInOutQuart">About</Link>
+              <Link to="about" duration={1800} smooth="easeInOutQuart" onClick={() => setIsOpen(false)}>About</Link>
             </li>
             <li>
               <NavLink to="/blog" onClick={() => handleNavClick()}>Blog</NavLink>

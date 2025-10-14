@@ -41,6 +41,8 @@ const ShowreelSection = () => {
 
   return (
     <div className={styles.showreelSection}>
+      <h2>My latest work...</h2>
+    <div className={styles.showreelContent}>
       {videos.map((video, index) => (
         <div className={styles.showreelItem} key={video.id}>
           {activeVideo === index ? (
@@ -64,6 +66,7 @@ const ShowreelSection = () => {
           )}
         </div>
       ))}
+    </div>
     </div>
   );
 };

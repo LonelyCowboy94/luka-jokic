@@ -3,6 +3,7 @@ import styles from "./Home.module.scss";
 import { Link } from "react-scroll";
 import ShowreelSection from "../components/ShowreelSection";
 import About from "./About";
+import Vsl from "../components/Vsl";
 
 const Home = ({ animate, setAnimate }) => {
   useEffect(() => {
@@ -18,7 +19,7 @@ const Home = ({ animate, setAnimate }) => {
   return (
     <main className={`${styles.main} ${animate ? styles.animate : ""}`}>
       <section className={styles.heroSection}>
-        <Link to="vsl" duration={1200} smooth="easeInOutQuart">
+        <Link to="vsl" duration={1200} smooth="easeInOutQuart" offset={-135}>
           <p>Video & Motion Designer</p>
           <h1>
             JOKIĆ <br /> LUKA
@@ -29,20 +30,13 @@ const Home = ({ animate, setAnimate }) => {
           </p>
         </Link>
       </section>
-      <section id="vsl" className={styles.vslSection}>
-        <h2>Find out how I bring your ideas to life...</h2>
-        <iframe
-          src="https://www.youtube.com/embed/SQ_NaJSwH4A?si=UKw0SSPPjzNqzSRk"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </section>
       <section id="about" className={styles.aboutSection}>
         <About />
       </section>
+      <section id="vsl" className={styles.vslSection}>
+        <Vsl />
+      </section>
+      
       <section id="showreel" className={styles.exploreSection}>
         <ShowreelSection />
       </section>
