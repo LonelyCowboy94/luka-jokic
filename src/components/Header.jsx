@@ -28,7 +28,7 @@ const Header = () => {
               <Link to="showreel" duration={1800} smooth="easeInOutQuart" offset={-90} onClick={() => setIsOpen(false)}>Showreel</Link>
             </li>
             <li>
-              <Link to="about" duration={1800} smooth="easeInOutQuart" onClick={() => setIsOpen(false)}>About</Link>
+              <Link to="about" duration={1800} smooth="easeInOutQuart" offset={-50} onClick={() => setIsOpen(false)}>About</Link>
             </li>
             <li>
               <NavLink to="/blog" onClick={() => handleNavClick()}>Blog</NavLink>
