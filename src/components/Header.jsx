@@ -1,50 +1,93 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
+import { useState, useEffect } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./Header.scss";
+import Nav from "./Nav";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [pendingScroll, setPendingScroll] = useState({
+    section: null,
+    offset: 0,
+  });
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const handleNavClick = () => {
     setIsOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+    smoothScrollTo(0);
+  };
+
+  const sectionOffsets = {
+    showreel: -90,
+    about: -50,
+    contact: -70,
+  };
+
+  const smoothScrollTo = (targetY, duration = 1800) => {
+    const startY = window.pageYOffset;
+    const distance = targetY - startY;
+    let startTime = null;
+
+    const easeInOutQuart = (t) =>
+      t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2;
+
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      const eased = easeInOutQuart(progress);
+      window.scrollTo(0, startY + distance * eased);
+      if (timeElapsed < duration) requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+  };
+
+  const handleScrollLink = (section) => {
+    setIsOpen(false);
+    const offset = sectionOffsets[section] || 0;
+
+    if (location.pathname === "/") {
+      const element = document.getElementById(section);
+      if (element) {
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + offset;
+        smoothScrollTo(y);
+      }
+    } else {
+      setPendingScroll({ section, offset });
+      navigate("/");
+    }
+  };
+
+  useEffect(() => {
+    if (pendingScroll.section && location.pathname === "/") {
+      const timer = setTimeout(() => {
+        const element = document.getElementById(pendingScroll.section);
+        if (element) {
+          const y =
+            element.getBoundingClientRect().top +
+            window.pageYOffset +
+            pendingScroll.offset;
+          smoothScrollTo(y);
+        }
+        setPendingScroll({ section: null, offset: 0 });
+      }, 200);
+
+      return () => clearTimeout(timer);
+    }
+  }, [pendingScroll, location.pathname]);
 
   return (
     <header>
-        <nav className="navbar">
-        
-        <div className="logo">MyLogo</div>
-
-        <div className={`nav-links ${isOpen ? "open" : ""}`}>
-          <ul>
-            <li>
-              <NavLink to="/" end onClick={() => handleNavClick()}>Home</NavLink>
-            </li>
-            <li>
-              <Link to="showreel" duration={1800} smooth="easeInOutQuart" offset={-90} onClick={() => setIsOpen(false)}>Showreel</Link>
-            </li>
-            <li>
-              <Link to="about" duration={1800} smooth="easeInOutQuart" offset={-50} onClick={() => setIsOpen(false)}>About</Link>
-            </li>
-            <li>
-              <NavLink to="/blog" onClick={() => handleNavClick()}>Blog</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" onClick={() => handleNavClick()}>Contact</NavLink>
-            </li>
-          </ul>
-        </div>
-
-        <div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
+      <Nav
+        isOpen={isOpen}
+        handleNavClick={handleNavClick}
+        handleScrollLink={handleScrollLink}
+        toggleMenu={toggleMenu}
+      />
     </header>
   );
 };

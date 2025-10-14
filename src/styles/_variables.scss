@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $font-color: #faf3dd;
 $subtitle-color: #c2a06d;
 $accent-color: rgb(255, 104, 104);
@@ -9,15 +11,17 @@ $warm-highlight: #ffb6a1;
 $golden-tint: #e2c391;
 $cool-contrast: #8ec5c4;
 $page-padding: 105px 0;
-$header-background: linear-gradient(to bottom, 
-  darken(rgb(22, 21, 21), 4%), 
-  darken(rgb(22, 21, 21), 12%), 
-  darken(rgb(29, 28, 28), 12%)
+$header-background: linear-gradient(
+  to bottom,
+  color.scale(rgb(22, 21, 21), $lightness: -4%),
+  color.scale(rgb(22, 21, 21), $lightness: -12%),
+  color.scale(rgb(29, 28, 28), $lightness: -12%)
 );
 
-$footer-background: linear-gradient(to bottom, 
-  darken(rgb(22, 21, 21), 12%), 
-  darken(rgb(22, 21, 21), 12%), 
-  darken(rgb(29, 28, 28), 10%)
+$footer-background: linear-gradient(
+  to bottom,
+  color.scale(rgb(22, 21, 21), $lightness: -12%),
+  color.scale(rgb(22, 21, 21), $lightness: -12%),
+  color.scale(rgb(29, 28, 28), $lightness: -10%)
 );
 $movie-animation: movieBars 1s cubic-bezier(0, 0, 0.2, 1) forwards;
