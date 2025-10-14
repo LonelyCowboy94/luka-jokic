@@ -9,9 +9,20 @@ body {
   min-height: 100vh;
   font-family: "Playfair Display", serif;
   font-size: 16px;
-  background: url("../assets/HomeBackground2.jpg") no-repeat center fixed;
- background-position: center top;
-  
-  background-size: cover;
 }
 
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../assets/HomeBackground2.jpg") center center / cover
+    no-repeat;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}

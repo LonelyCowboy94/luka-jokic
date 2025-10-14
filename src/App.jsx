@@ -13,6 +13,7 @@ function App() {
 
   return (
     <>
+    <div className="background-image"></div>
       <Header />
       <Routes animate={animate} setAnimate={setAnimate} />
       <Footer />
