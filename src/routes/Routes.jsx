@@ -6,6 +6,7 @@ import Contact from "../pages/Contact";
 import Blog from "../pages/Blog";
 import ScrollToTop from "./ScrollToTop";
 
+
 export default function AppRoutes({ animate, setAnimate }) {
   return (
     <>

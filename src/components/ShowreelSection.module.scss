@@ -1,0 +1,14 @@
+.showreelSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.showreelItem img, .showreelItem iframe {
+    width: 450px;
+    height: 288px;
+    border-radius: 7px;
+}
+

@@ -5,7 +5,7 @@ import profileImage from "../assets/luka-profile.jpg";
 
 const About = () => {
   return (
-    <main className={styles.main}>
+    <div>
       <div className={styles.header}>
         <h1>
           Hi, I’m <strong>Luka Jokić</strong>
@@ -13,7 +13,7 @@ const About = () => {
         <h2>Video Editor & Creative Content Creator</h2>
       </div>
 
-      <section className={styles.bio}>
+      <div className={styles.bio}>
         <div className={styles.imageWrapper}>
           <img src={profileImage} alt="Portrait of Luka Jokić – Video Editor" />
         </div>
@@ -43,32 +43,9 @@ const About = () => {
             smoothly from concept to completion.
           </p>
         </div>
-      </section>
-      <div className={styles.infoContainer}>
-        <section className={styles.skills}>
-          <h3>Skills & Expertise</h3>
-          <ul>
-            <li>Cinematic video editing and montage</li>
-            <li>Creative storytelling and visual design</li>
-            <li>Motion graphics and post-production techniques</li>
-            <li>Client communication and project management</li>
-          </ul>
-        </section>
-        <section className={styles.tools}>
-          <h3>Tools I Use</h3>
-          <ul>
-            <li>Adobe Premiere Pro</li>
-            <li>After Effects</li>
-            <li>DaVinci Resolve</li>
-            <li>Photoshop</li>
-          </ul>
-        </section>
-        <section className={styles.contactCta}>
-          <h3>Let’s create something together.</h3>
-          <NavLink to="/contact" className={styles.getInTouchBtn}>Get in Touch</NavLink>
-        </section>
       </div>
-    </main>
+     
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import "./Header.scss";
 
 const Header = () => {
@@ -24,10 +25,10 @@ const Header = () => {
               <NavLink to="/" end onClick={() => handleNavClick()}>Home</NavLink>
             </li>
             <li>
-              <NavLink to="/showreel" onClick={() => handleNavClick()}>Showreel</NavLink>
+              <Link to="showreel" duration={1800} smooth="easeInOutQuart">Showreel</Link>
             </li>
             <li>
-              <NavLink to="/about" onClick={() => handleNavClick()}>About</NavLink>
+              <Link to="about" duration={1800} smooth="easeInOutQuart">About</Link>
             </li>
             <li>
               <NavLink to="/blog" onClick={() => handleNavClick()}>Blog</NavLink>

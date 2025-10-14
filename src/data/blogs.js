@@ -6,7 +6,7 @@ export const blogs = [
     title: "Top 5 Video Editing Tricks That Make Your Content Stand Out",
     teaser:
       "In today’s fast-paced digital world, captivating video content is key to grabbing and keeping an audience’s attention. While a great idea is essential, the way you edit your video—through smart cuts, seamless transitions, and polished sound design—can make the difference between your content being skipped or widely shared. Discover essential techniques to elevate every project from ordinary to memorable.",
-    date: "2025-10-08",
+    date: "2025-10-07",
     image: images.blog1,
     author: "Luka Jokić",
     content: [
