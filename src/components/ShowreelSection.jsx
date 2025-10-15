@@ -9,32 +9,32 @@ const ShowreelSection = () => {
   const videos = [
     {
       id: 1,
-      src: "https://www.youtube.com/embed/tJ8rdpMptzM?mute=1&autoplay=1",
+      src: "https://www.youtube.com/embed/GtZfGV_kCFo?si=eSL2zZkxoo3w_Ab-&mute=1&autoplay=1",
       thumbnail: thumbnails.thumbnail1
     },
     {
       id: 2,
-      src: "https://www.youtube.com/embed/uYjgWPEg1xo?si=K1P8103-qtWYFHtu&mute=1&autoplay=1",
+      src: "https://www.youtube.com/embed/kmudRbtJvTk?si=2KPoueJ8S2xe7477&mute=1&autoplay=1",
       thumbnail:  thumbnails.thumbnail2
     },
     {
       id: 3,
-      src: "https://www.youtube.com/embed/YWX8183GLmI?si=3mNT34CfTFLz8TSl&mute=1&autoplay=1",
+      src: "https://www.youtube.com/embed/22lclfSCPmM?si=9KaRSZFFsPmw82D3&mute=1&autoplay=1",
       thumbnail: thumbnails.thumbnail3
     },
     {
       id: 4,
-      src: "https://www.youtube.com/embed/3_88HnCXEv4?si=0jvsLJZFgQyw1rsq&mute=1&autoplay=1",
+      src: "https://youtube.com/embed/lpljwYbpf8M?si=anz3Us1IhFLVH-ld&mute=1&autoplay=1",
       thumbnail:  thumbnails.thumbnail4
     },
     {
       id: 5,
-      src: "https://www.youtube.com/embed/3PMNcQKZ5Go?si=cPXqQ7QIqUU5Qggf&mute=1&autoplay=1",
+      src: "https://youtube.com/embed/23Wc1vg62ew?si=bK0DyZcGI_oJ_Dtt&mute=1&autoplay=1",
       thumbnail: thumbnails.thumbnail5
     },
     {
       id: 6,
-      src: "https://www.youtube.com/embed/w0OaLTVHNko?si=swL5scikX41V6cFB&mute=1&autoplay=1",
+      src: "https://youtube.com/embed/czIuSb0CMeI?si=urL6pWPj_VASDSE8&mute=1&autoplay=1",
       thumbnail: thumbnails.thumbnail6
     },
   ];
