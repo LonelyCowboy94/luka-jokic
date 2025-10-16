@@ -1,0 +1,120 @@
+@use "../styles/variables.scss" as *;
+
+.navbar {
+    animation: fadeIn 4s ease-in forwards;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+
+    .logo {
+      display: none;
+      color: $font-color;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 5;
+
+      span {
+        width: 25px;
+        height: 3px;
+        background: $font-color;
+        border-radius: 2px;
+        transition: 0.3s;
+      }
+
+      &.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      &.open span:nth-child(2) {
+        opacity: 0;
+      }
+      &.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+
+    
+
+    .navLinks ul {
+      display: flex;
+      list-style: none;
+      gap: 50px;
+
+      li a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: $font-color;
+        user-select: none;
+
+        &:hover,
+        &.active {
+          color: #c2a06d;
+        }
+      }
+    }
+ li a:hover {
+  color: $accent-color !important;
+ }
+ 
+ .navLinks a {
+  cursor: pointer;
+ }
+  
+
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+        margin-left: auto;
+      }
+      .logo {
+        display: block;
+      }
+
+      .navLinks{
+        position: fixed;
+        top: 12vh;
+        right: 0;
+        width: 70%;
+        max-width: 300px;
+        height: calc(100vh - 12vh);
+        background: rgba(77, 77, 77, 0.897);
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 4;
+        display: flex;
+        justify-content: flex-start;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        &.open {
+          transform: translateX(0);
+        }
+
+        ul {
+          flex-direction: column;
+          gap: 2rem;
+
+          li a {
+            font-size: 1.7rem;
+            color: $subtitle-color;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.575);
+          }
+        }
+      }
+    }
+  }
+

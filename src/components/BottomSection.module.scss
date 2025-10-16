@@ -1,0 +1,32 @@
+@use '../styles/variables' as *;
+
+.bottomContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  color: $border-color;
+  .recentBlogs {
+    display: inherit;
+    flex-direction: column;
+    h4 {
+      text-align: center;
+    }
+  }
+
+  .contactDiv {
+    display: inherit;
+    flex-direction: column;
+    width: 300px;
+    h3 {
+      text-align: center;
+    }
+    p {
+      display: inherit;
+    }
+    p span {
+      margin-left: auto;
+    }
+  }
+}

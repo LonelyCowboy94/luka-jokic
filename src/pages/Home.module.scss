@@ -70,7 +70,8 @@
 
 .exploreSection,
 .aboutSection,
-.vslSection {
+.vslSection, 
+.bottomSection {
   color: $font-color;
   width: 100%;
   display: flex;
@@ -82,6 +83,11 @@
 .aboutSection,
 .exploreSection {
   background: rgba(0, 0, 0, 0.911);
+}
+
+.bottomSection {
+  background: #faf3ddcc;
+  padding-top: 30px;
 }
 
 @media screen and (max-width: 768px) {

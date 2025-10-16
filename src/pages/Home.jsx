@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import ShowreelSection from "../components/ShowreelSection";
 import About from "./About";
 import Vsl from "../components/Vsl";
+import BottomSection from "../components/BottomSection";
 
 const Home = ({ animate, setAnimate }) => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const Home = ({ animate, setAnimate }) => {
   return (
     <main className={`${styles.main} ${animate ? styles.animate : ""}`}>
       <section className={styles.heroSection}>
-        <Link to="vsl" duration={1200} smooth="easeInOutQuart" offset={-135}>
+        <Link to="vsl" duration={1200} smooth="easeInOutQuart" offset={-120}>
           <p>Video & Motion Designer</p>
           <h1>
             JOKIĆ <br /> LUKA
@@ -39,6 +40,10 @@ const Home = ({ animate, setAnimate }) => {
       
       <section id="showreel" className={styles.exploreSection}>
         <ShowreelSection />
+        
+      </section>
+      <section className={styles.bottomSection}>
+        <BottomSection />
       </section>
     </main>
   );

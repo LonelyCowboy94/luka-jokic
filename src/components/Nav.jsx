@@ -1,11 +1,12 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import styles from './Nav.module.scss';
 
 const Nav = ({ isOpen, handleNavClick, handleScrollLink, toggleMenu }) => {
   return (
-     <nav className="navbar">
-        <div className="logo">MyLogo</div>
+     <nav className={styles.navbar}>
+        <div className={styles.logo}>MyLogo</div>
 
-        <div className={`nav-links ${isOpen ? "open" : ""}`}>
+        <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
           <ul>
             <li>
               <NavLink to="/" end onClick={handleNavClick}>
@@ -36,7 +37,7 @@ const Nav = ({ isOpen, handleNavClick, handleScrollLink, toggleMenu }) => {
         </div>
 
         <div
-          className={`hamburger ${isOpen ? "open" : ""}`}
+          className={`${styles.hamburger} ${isOpen ? "open" : ""}`}
           onClick={toggleMenu}
         >
           <span></span>

@@ -21,7 +21,7 @@ const Header = () => {
 
   const sectionOffsets = {
     showreel: -50,
-    about: -30,
+    about: -40,
     contact: -70,
   };
 

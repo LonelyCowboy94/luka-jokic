@@ -1,0 +1,31 @@
+@use "../styles/variables" as *;
+
+.faqDiv {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  h3 {
+    margin-top: auto;
+    margin-bottom: 1rem;
+  }
+  .faqItem {
+    margin-bottom: 1rem;
+    min-height: 25px;
+    max-width: 300px;
+
+    .question {
+      font-weight: bold;
+      cursor: pointer; 
+      margin-bottom: 0.3rem;
+    }
+
+    .answerDiv {
+    
+     
+    }
+
+    .answer {
+      font-size: 0.9rem;
+    }
+  }
+}
