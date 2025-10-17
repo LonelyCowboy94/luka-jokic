@@ -1,7 +1,8 @@
 @use "../styles/variables.scss" as *;
+@use "../styles/animations";
 
 .navbar {
-    animation: fadeIn 4s ease-in forwards;
+    animation: fadeIn 2.5s ease-in forwards;
     position: relative;
     display: flex;
     justify-content: center;

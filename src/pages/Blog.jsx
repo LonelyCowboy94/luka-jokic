@@ -25,8 +25,8 @@ const Blog = () => {
       <section className={styles.blogs}>
         {blogs.map((blog, index) => {
           return (
-            <>
-            <Link to={`/blog/${blog.slug}`} key={index} className={`links`}>
+            <Fragment  key={blog.id}>
+            <Link to={`/blog/${blog.slug}`} className={`links`}>
               <article className={styles.blogCard}>
                 <div>
                   <h2>{blog.title}</h2>
@@ -39,7 +39,7 @@ const Blog = () => {
               </article>
             </Link>
             <div className="divider"></div>
-            </>
+            </Fragment>
           );
         })}
       </section>

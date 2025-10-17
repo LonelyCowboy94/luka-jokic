@@ -20,8 +20,8 @@ const Header = () => {
   };
 
   const sectionOffsets = {
-    showreel: -50,
-    about: -40,
+    showreel: -80,
+    about: -150,
     contact: -70,
   };
 

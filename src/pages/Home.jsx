@@ -20,7 +20,7 @@ const Home = ({ animate, setAnimate }) => {
   return (
     <main className={`${styles.main} ${animate ? styles.animate : ""}`}>
       <section className={styles.heroSection}>
-        <Link to="vsl" duration={1200} smooth="easeInOutQuart" offset={-120}>
+        <Link to="vsl" duration={1200} smooth="easeInOutQuart" offset={-180}>
           <p>Video & Motion Designer</p>
           <h1>
             JOKIĆ <br /> LUKA
