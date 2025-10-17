@@ -1,0 +1,77 @@
+@use "../styles/variables" as *;
+
+.contactSection {
+  padding: $page-padding;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .container {
+    max-width: 650px;
+    padding: 10px;
+    p {
+      color: $font-color;
+      text-align: center;
+      letter-spacing: 1.2px;
+  
+      span {
+        color: #faf3dd71;
+        font-size: 0.8rem;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+  .form {
+    background-color: #0000008a;
+    backdrop-filter: blur(3px);
+    border-radius: 7px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    button {
+      width: 300px;
+      border-radius: 7px;
+      margin-top: 5px;
+    }
+    .senderInfo {
+      margin-bottom: auto;
+      
+      input {
+        letter-spacing: 0.5px;
+        border-radius: 7px;
+        padding: 5px 10px;
+        width: 250px;
+        border: none;
+        margin-bottom: 15px;
+        background-color: #faf3dd9d;
+        color: $bg-dark;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .message {
+      textarea {
+        letter-spacing: 0.5px;
+        color: $bg-dark;
+        width: 300px;
+        padding: 7px;
+        border-radius: 7px;
+        border: none;
+        background-color: #faf3dd9d;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
