@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 
 import Contact from "../pages/Contact";
 import Blog from "../pages/Blog";
+import BlogPost from "../pages/BlogPosts";
 import ScrollToTop from "./ScrollToTop";
 
 export default function AppRoutes({ animate, setAnimate }) {
@@ -17,6 +18,7 @@ export default function AppRoutes({ animate, setAnimate }) {
 
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
     </>
   );

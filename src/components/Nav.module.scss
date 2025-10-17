@@ -42,12 +42,14 @@
       }
     }
 
-    
+   
 
     .navLinks ul {
       display: flex;
+      margin: 0 auto;
       list-style: none;
       gap: 50px;
+      
 
       li a {
         font-size: 1.2rem;

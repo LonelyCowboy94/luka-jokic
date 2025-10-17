@@ -1,6 +1,7 @@
 import styles from "./Blog.module.scss";
 import { blogs } from "../data/blogs";
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
 
@@ -24,7 +25,8 @@ const Blog = () => {
       <section className={styles.blogs}>
         {blogs.map((blog, index) => {
           return (
-            <Fragment key={index}>
+            <>
+            <Link to={`/blog/${blog.slug}`} key={index} className={`links`}>
               <article className={styles.blogCard}>
                 <div>
                   <h2>{blog.title}</h2>
@@ -35,7 +37,9 @@ const Blog = () => {
                 </div>
                 <p className={styles.author}>Posted {formatDate(blog.date)} by <strong>{blog.author}</strong></p>
               </article>
-            </Fragment>
+            </Link>
+            <div className="divider"></div>
+            </>
           );
         })}
       </section>

@@ -15,6 +15,7 @@
   height: 230px;
   margin-top: -25px;
   overflow: hidden;
+  margin-bottom: 30px;
 
   &::before {
     content: "";
@@ -47,6 +48,10 @@
 
 .blogs {
   max-width: 600px;
+}
+
+.blogCard {
+  margin: 50px;
 }
 
 .blogCard:not(:last-child) {

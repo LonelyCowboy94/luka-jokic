@@ -70,8 +70,8 @@
 
 .exploreSection,
 .aboutSection,
-.vslSection, 
-.bottomSection {
+.vslSection 
+ {
   color: $font-color;
   width: 100%;
   display: flex;
@@ -87,8 +87,10 @@
 
 .bottomSection {
   background: #faf3ddcc;
-  padding-top: 30px;
+  padding: 25px;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .heroSection h1 {

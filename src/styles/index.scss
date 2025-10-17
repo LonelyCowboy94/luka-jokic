@@ -1,3 +1,5 @@
+@use '../styles/variables' as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -26,4 +28,16 @@ body {
 .content {
   position: relative;
   z-index: 1;
+}
+
+.divider {
+  width: 80%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+  margin: 20px auto;
+}
+
+.links {
+  text-decoration: none;
+  color: $border-color;
+  
 }

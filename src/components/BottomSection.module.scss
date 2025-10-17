@@ -1,4 +1,5 @@
-@use '../styles/variables' as *;
+@use "../styles/variables" as *;
+@use "../styles/mixins" as mix;
 
 .bottomContainer {
   display: flex;
@@ -10,6 +11,7 @@
   .recentBlogs {
     display: inherit;
     flex-direction: column;
+    @include mix.bottomDivs;
     h4 {
       text-align: center;
     }
@@ -19,6 +21,7 @@
     display: inherit;
     flex-direction: column;
     width: 300px;
+    @include mix.bottomDivs;
     h3 {
       text-align: center;
     }
@@ -29,4 +32,10 @@
       margin-left: auto;
     }
   }
+}
+
+.lastSentence {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
 }

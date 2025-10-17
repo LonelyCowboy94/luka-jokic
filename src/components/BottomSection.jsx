@@ -15,12 +15,13 @@ const BottomSection = () => {
   ];
   console.log(last5Blogs);
   return (
+    <>
     <div className={styles.bottomContainer}>
       {/* Recent Blogs */}
       <div className={styles.recentBlogs}>
         <h4>Recent Blogs</h4>
         {last5Blogs.map((blog) => (
-          <Link key={blog.id}>{blog.title}</Link>
+          <Link key={blog.id} to={`/blog/${blog.slug}`}>{blog.title}</Link>
         ))}
       </div>
 
@@ -50,6 +51,13 @@ const BottomSection = () => {
         </p>
       </div>
     </div>
+    <div className="divider"></div>
+    <p className={styles.lastSentence}>In a world overflowing with content, authenticity has become the rarest form of art.
+My work is driven by a simple principle — to create with intention.
+Every frame, every sound, every cut has a purpose.
+It’s not just about what you see, but how it makes you feel.
+That’s the kind of storytelling I believe in.</p>
+    </>
   );
 };
 
