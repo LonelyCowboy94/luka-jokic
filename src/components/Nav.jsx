@@ -4,7 +4,8 @@ import styles from './Nav.module.scss';
 const Nav = ({ isOpen, handleNavClick, handleScrollLink, toggleMenu }) => {
   return (
      <nav className={styles.navbar}>
-        <div className={styles.logo}>MyLogo</div>
+      <NavLink to="/" end onClick={handleNavClick}><div className={styles.logo}>MyLogo</div></NavLink>
+        
 
         <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
           <ul>

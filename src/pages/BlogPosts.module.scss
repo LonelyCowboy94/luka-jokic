@@ -9,6 +9,9 @@
     display: inherit;
     flex-direction: column;
     max-width: 700px;
+    div p {
+        margin: 0 12px;
+    }
   }
   h1 {
     text-align: center;
