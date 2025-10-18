@@ -34,19 +34,19 @@ const BottomSection = () => {
         <p>
           Viber:{" "}
           <span>
-            <a href="tel:+381612214049">+381612214049</a>
+            <a href="viber://chat?number=%2B381612214049">(+381) 61 221 40 49</a>
           </span>
         </p>
         <p>
           WhatsApp:{" "}
           <span>
-            <a href="tel:+381612214049">+381612214049</a>
+            <a href="https://wa.me/381612214049" target="_blank">(+381) 61 221 40 49</a>
           </span>
         </p>
         <p>
           Email:{" "}
           <span>
-            <a href="mailto:lukajokic@ymail.com">lukajokic@ymail.com</a>
+            <a href="mailto:lukajokic413@gmail.com">lukajokic413@gmail.com</a>
           </span>
         </p>
       </div>

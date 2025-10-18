@@ -20,9 +20,8 @@ const Header = () => {
   };
 
   const sectionOffsets = {
-    showreel: -80,
-    about: -150,
-    contact: -70,
+    showreel: -60,
+    about: -80,
   };
 
   const smoothScrollTo = (targetY, duration = 1800) => {

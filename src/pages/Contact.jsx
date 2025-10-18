@@ -70,7 +70,7 @@ const Contact = () => {
           </label>
           <textarea
             rows="2"
-            cols="40"
+            cols="30"
             name="message"
             id="message"
             placeholder="Your message here..."
