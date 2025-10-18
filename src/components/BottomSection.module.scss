@@ -7,13 +7,22 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  color: $border-color;
+  color: $font-color;
   .recentBlogs {
     display: inherit;
     flex-direction: column;
     @include mix.bottomDivs;
+    text-align: center;
     h4 {
       text-align: center;
+      color: $warm-highlight;
+    }
+    a {
+      text-decoration: none;
+      color: $font-color;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -22,14 +31,31 @@
     flex-direction: column;
     width: 300px;
     @include mix.bottomDivs;
+    
     h3 {
       text-align: center;
+      color: $warm-highlight;
     }
     p {
       display: inherit;
+      text-align: left;
+      
     }
     p span {
       margin-left: auto;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    p:not(span) {
+    
+    }
+   
+    a {
+      text-decoration: none;
+      color: $font-color;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -38,4 +64,6 @@
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
+  color: $font-color;
+    opacity: 0.3;
 }

@@ -82,6 +82,12 @@ const Contact = () => {
           </button>
         </form>
       </div>
+      <div className="divider" style={{borderBottom: `1px solid`, width: '50%'}}></div>
+      <p className={styles.lastSentence}>In a world overflowing with content, authenticity has become the rarest form of art.
+      My work is driven by a simple principle — to create with intention.
+      Every frame, every sound, every cut has a purpose.
+      It’s not just about what you see, but how it makes you feel.
+      That’s the kind of storytelling I believe in.</p>
     </section>
   );
 };
