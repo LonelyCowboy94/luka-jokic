@@ -9,7 +9,7 @@ const Contact = () => {
       <div className={styles.container}>
         <div className={styles.contactPage}>
           <div className={styles.email}>
-            <a href="mailto:lukajokic413@gmail.com">
+            <a href="mailto:lukajokic413@gmail.com" target="_self" rel="noopener noreferrer">
               <MdEmail className={styles.icon} />
             </a>
             <div>
@@ -18,7 +18,7 @@ const Contact = () => {
             </div>
           </div>
           <div className={styles.phone}>
-            <a href="tel:+381612214049">
+            <a href="tel:+381612214049" target="_self" rel="noopener noreferrer">
               <MdPhone className={styles.icon} />
             </a>
             <div>
