@@ -10,7 +10,7 @@ const Nav = ({ isOpen, handleNavClick, handleScrollLink, toggleMenu }) => {
         <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
           <ul>
             <li>
-              <NavLink to="/" end onClick={handleNavClick}>
+              <NavLink className={({ isActive }) => isActive ? styles.active : ""} to="/" onClick={handleNavClick}>
                 Home
               </NavLink>
             </li>
@@ -24,13 +24,13 @@ const Nav = ({ isOpen, handleNavClick, handleScrollLink, toggleMenu }) => {
             </li>
 
             <li>
-              <NavLink to="/blog" onClick={handleNavClick}>
+              <NavLink className={({ isActive }) => isActive ? styles.active : ""} to="/blog" onClick={handleNavClick}>
                 Blog
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/contact" onClick={handleNavClick}>
+              <NavLink className={({ isActive }) => isActive ? styles.active : ""} to="/contact" onClick={handleNavClick}>
                 Contact
               </NavLink>
             </li>

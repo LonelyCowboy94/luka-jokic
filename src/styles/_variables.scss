@@ -13,15 +13,10 @@ $cool-contrast: #8ec5c4;
 $page-padding: 105px 0;
 $header-background: linear-gradient(
   to bottom,
-  color.scale(rgb(22, 21, 21), $lightness: -4%),
-  color.scale(rgb(22, 21, 21), $lightness: -12%),
-  color.scale(rgb(29, 28, 28), $lightness: -12%)
+  color.scale(rgb(19, 18, 18)),
+  color.scale(rgb(15, 15, 15),),
+  color.scale(rgb(15, 15, 15))
 );
 
-$footer-background: linear-gradient(
-  to bottom,
-  color.scale(rgb(22, 21, 21), $lightness: -12%),
-  color.scale(rgb(22, 21, 21), $lightness: -12%),
-  color.scale(rgb(29, 28, 28), $lightness: -10%)
-);
-$movie-animation: movieBars 1s cubic-bezier(0, 0, 0.2, 1) forwards;
+$footer-background: rgb(14, 13, 12);
+$movie-animation: movieBars 0.5s cubic-bezier(0, 0, 0.2, 1) forwards;

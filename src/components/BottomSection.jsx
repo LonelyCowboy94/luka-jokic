@@ -34,13 +34,13 @@ const BottomSection = () => {
         <p>
           Viber:{" "}
           <span>
-            <a href="tel:+381601234567">+381 60 123 4567</a>
+            <a href="tel:+381612214049">+381612214049</a>
           </span>
         </p>
         <p>
           WhatsApp:{" "}
           <span>
-            <a href="tel:+381601234567">+381 60 123 4567</a>
+            <a href="tel:+381612214049">+381612214049</a>
           </span>
         </p>
         <p>

@@ -11,7 +11,7 @@ const Home = ({ animate, setAnimate }) => {
     if (animate) {
       const timer = setTimeout(() => {
         setAnimate(false);
-      }, 3000);
+      }, 1000);
 
       return () => clearTimeout(timer);
     }

@@ -27,7 +27,7 @@
 }
 
 .animate {
-  animation: fadeIn 2s ease-in forwards;
+  animation: fadeIn 1s ease-in forwards;
 }
 
 .heroSection p:first-child {
@@ -83,6 +83,10 @@
 .aboutSection,
 .exploreSection {
   background: rgba(0, 0, 0, 0.911);
+}
+
+.exploreSection {
+  padding-bottom: 80px;
 }
 
 .bottomSection {

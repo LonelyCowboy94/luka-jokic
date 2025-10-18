@@ -2,7 +2,7 @@
 @use "../styles/animations";
 
 .navbar {
-    animation: fadeIn 2.5s ease-in forwards;
+    animation: fadeIn 1.6s ease-in forwards;
     position: relative;
     display: flex;
     justify-content: center;
@@ -62,10 +62,8 @@
         color: $font-color;
         user-select: none;
 
-        &:hover,
-        &.active {
-          color: #c2a06d;
-        }
+        
+        
       }
     }
  li a:hover {
@@ -76,7 +74,9 @@
   cursor: pointer;
  }
   
-
+.active {
+          color: #c2a06d !important;
+        }
 
     @media (max-width: 768px) {
       .hamburger {
